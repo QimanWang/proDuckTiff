@@ -17,23 +17,23 @@ Let’s define the baseline to be one day. I think it makes sense to plan your d
 
 so let’s define the following ideas:
 
-- T : task - one unit of work. 
+**T : task - one unit of work.** 
  - T1, T2 … are each tasks
 
-D : day - the smallest planning interval. Composed of T’s
+**D : day - the smallest planning interval. Composed of T’s**
 {things inside this bracket are part of a list , second part, 3rd part}
 D1 = {T1,T2,T3,...} this means there can be many tasks in 1 day.
 
-S : Short Term Project - Composed of D’s
+**S : Short Term Project - Composed of D’s**
 An short term project , goal, milestone that takes couple of days to reach.
 S1 = {D1,D2,...}
 
 
-L : long Term Project - Composed of S’s
+**L : long Term Project - Composed of S’s**
 A project/ long term goal that can take months/years to reach. So L can be broken up into smaller S’s
 L{ S1, S2, ...}
 
-B: backlog-  to be the list of things we want to do, whether it be small task or goals.
+**B: backlog-  to be the list of things we want to do, whether it be small task or goals.**
 
 
 When planning we always want to start from the high level. we need to see the bigger picture and the expected outcome.
