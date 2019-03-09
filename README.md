@@ -16,8 +16,9 @@ There is only so many hours in a day to do stuff. The objective here is to alloc
 Let’s define the baseline to be one day. I think it makes sense to plan your day out and not your hours out. When you sleep, you kind of “reset” your upcoming day. 
 
 so let’s define the following ideas:
-T : task - one unit of work. 
-T1, T2 … are each tasks
+
+- T : task - one unit of work. 
+ - T1, T2 … are each tasks
 
 D : day - the smallest planning interval. Composed of T’s
 {things inside this bracket are part of a list , second part, 3rd part}
