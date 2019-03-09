@@ -160,7 +160,7 @@ basically the task time should include the transit times.
 
 ## steps to determine the output process 
 1.we first occupy all the na_times in this case, 
-
+```json
 {
 "output":{
     "0":"sleep",
@@ -179,18 +179,19 @@ basically the task time should include the transit times.
     "24":"",
 }
 }
-
+```
 2. then we sort the tasks by priority.
+```json
 {
     "T3":{"work":"8:30-5:30","priority":"required"},
     "T2" :{"what":"hand in hw due today","time":"2hr","priority":"high"},
     "T1": {"what":"do laundry","time":"1hr","priority":"meh"}     
 }
-
+```
 we will put t3, with the specified time first, 
 then t2, if no specified time, we can just put it in the next available time.
 this seems logical right now hmm.
-
+```json
 {
     "output":{
         "0":"sleep",
@@ -208,7 +209,7 @@ this seems logical right now hmm.
         "24":"sleep",
     }
 }
-
+```
 okay so all the tasks are done. we still have 
 2 slots still open ,
 22:00-23:00, 8:00-8:30
@@ -216,6 +217,7 @@ okay so all the tasks are done. we still have
 let's go into our shorterm lists,
 and add some tasks from there.
 let's say we have 3 projects,
+```json
 {
     "short_term_projects":[
     {"stp1-aws certification":{
@@ -241,7 +243,7 @@ let's say we have 3 projects,
     }}    
     ]} 
 }
-
+```
 we would sort by the highest prioritys, and get the next task in the task queue,
 we then pop the task out and place it.
 * maybe have a pop up asking user to pick which project they want to work on today if there are multiple choices.
