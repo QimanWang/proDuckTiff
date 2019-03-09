@@ -40,21 +40,218 @@ L{ S1, S2, ...}
 When planning we always want to start from the high level. we need to see the bigger picture and the expected outcome.
 Let’s see if we can plan something using this framework.
 
+
+
+Let's frame this like an leetcodeish problem:
+given a list of input task in the form of a backlog. each task can have properties. 
+(we can modify the input as we go).
+
+output: schedule for the next n days. let's start with n = 1 for now.
+
+let's define our input 
 Backlog = {Wash poppy (my dog) , get AWS certification, Workout. }
 
+#example output 
+output:{
+    0:do x,
+    1:do y,
+    ...
+    24:
+}
+
+# some cases
+## 0
+input : {} #no task 
+output:{
+    0:,
+    1:,
+    ...
+    24:
+}
+
+### 1
+input: tasks:{ "T1- do laundry":"1hr" }, user_profile.NA_times,
+hmm, okay so we have 1 task. what other information do we need?
+we need to know the times that are available. Because a person probably sleep lol.
+so we need more context it seems,
+what if we have a profile of the user like as follows:
+user_profile{
+    "user_type":"employee", 
+    "occupied_times":{
+        "sleep":["23-7", "1-1:30"],
+        "meals":["7:15-7:30"],
+        "shower":"",
+        "travel":"",
+        "other":{
+            "get_ready":"7:30-8:00"
+        }
+    }
+}
+
+there is too much cases because people are different and it's hard to take into account.
+But there is probably some kind of pattern here.
+so input needs a list of blocked off times.
+
+once we can fiugure out what times are available on the calendar, we can now place the tasks.
+
+example : output
+output:{
+    0:sleep,
+    1:sleep,
+    2:sleep,
+    3:sleep,
+    4:sleep,
+    5:sleep,
+    6:sleep,
+    7,breakfast, get ready
+    8,laundry
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24:
+}
+
+## 2
+
+if we have 2 tasks
+input: tasks:{ "T1- do laundry":"1hr", "T2- hand in hw due today":"1hr", "T2-work":"9-5" }, user_profile.NA_times,
+
+tasks can be of different types: 
+{
+"task_types":{
+    "1": "one time",
+    "r": "reoccuring"
+    }
+}
+{
+"task_values":[
+    "required","high","medium","low","meh"
+]
+}
+
+## should look something ike this
+tasks should also have priorities over each other, giving this input, 
+{
+"input":{
+    "tasks":{ 
+        "T1": {"what":"do laundry","time":"1hr","priority":"meh"},
+        "T2" :{"what":"hand in hw due today","time":"2hr","priority":"high"}, 
+        "T3":{"work":"8:30-5","priority":"required"},
+    "NA_times/user_profile.NA_times":[[23-7,7-8,20-21]],
+}
+}
+work is kind of a reoccuring na_times, it's debatable,
+actually work should be it's own task and not reoccuring cuz we need the transit time included.
+basically the task time should include the transit times.
+
+## steps to determine the output process 
+1.we first occupy all the na_times in this case, 
+
+{
+"output":{
+    "0":"sleep",
+    "6":"sleep",
+    "8":"",
+    "8:30":"transit to work",
+    "9":"",
+    ...
+    "17":"",
+    "18":"",
+    "19":"",
+    "20":"",
+    "21":"",
+    "22":"",
+    "23":"",
+    "24":"",
+}
+}
+
+2. then we sort the tasks by priority.
+{
+    "T3":{"work":"8:30-5:30","priority":"required"},
+    "T2" :{"what":"hand in hw due today","time":"2hr","priority":"high"},
+    "T1": {"what":"do laundry","time":"1hr","priority":"meh"}     
+}
+
+we will put t3, with the specified time first, 
+then t2, if no specified time, we can just put it in the next available time.
+this seems logical right now hmm.
+
+{
+    "output":{
+        "0":"sleep",
+        "6":"sleep",
+        "8":"",
+        "8:30":"transit to work",
+        "9":"work",
+        "17":"work",
+        "18":"Hw",
+        "19":"hw",
+        "20":"dinner, shower",
+        "21":"laundry",
+        "22":"",
+        "23":"sleep",
+        "24":"sleep",
+    }
+}
+
+okay so all the tasks are done. we still have 
+2 slots still open ,
+22:00-23:00, 8:00-8:30
+
+let's go into our shorterm lists,
+and add some tasks from there.
+let's say we have 3 projects,
+{
+    "short_term_projects":[
+    {"stp1-aws certification":{
+        "priority":"high"
+        "time_spent_so_far":"34hr",
+        "mile_stones/completed_tasks":["ch1","ch2"],
+        "task_queue:":["ch3","ch30"],
+        "marker":"some market that tells when the next task is"
+    }},
+    {"stp2-XXXX":{
+        "priority":"low"
+        "time_spent_so_far":"34hr",
+        "mile_stones/completed_tasks":["ch1","ch2"],
+        "task_queue:":["ch3","ch30"],
+        "marker":"some market that tells when the next task is"
+    }},
+    {"stp3-yyyyy":{
+        "priority":"high"
+        "time_spent_so_far":"34hr",
+        "mile_stones/completed_tasks":["ch1","ch2"],
+        "task_queue:":["ch4","ch30"],
+        "marker":"some market that tells when the next task is"
+    }}    
+    ]} 
+}
+
+we would sort by the highest prioritys, and get the next task in the task queue,
+we then pop the task out and place it.
+* maybe have a pop up asking user to pick which project they want to work on today if there are multiple choices.
+or randomly display and if the user don't liek it, we can choose the next available task.
+
+or maybe we can shuffle the tasks that are not set in stone, like laundry, homework, etc.
 
 
- 
+## maybe there are no tasks in short term projects, 
+we can go into th long term and pop some tasks out and create short term tasks.
 
 
-
-
-
-Day
-Upcoming: bigger to be completed in the next few days.
-Short term: 
-Long term:
-Reaccuring:
 
 
 
