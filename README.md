@@ -143,6 +143,7 @@ tasks can be of different types:
 
 ## should look something ike this
 tasks should also have priorities over each other, giving this input, 
+```json
 {
 "input":{
     "tasks":{ 
@@ -151,6 +152,7 @@ tasks should also have priorities over each other, giving this input,
         "T3":{"work":"8:30-5","priority":"required"},
     "NA_times/user_profile.NA_times":[[23-7,7-8,20-21]],
 }
+```
 }
 work is kind of a reoccuring na_times, it's debatable,
 actually work should be it's own task and not reoccuring cuz we need the transit time included.
