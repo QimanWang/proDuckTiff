@@ -1,16 +1,18 @@
-Why this doc?
-Failing to plan is planning to fail. However over planning and not doing enough is just and bad.
-I want to create a framework that works for me and I can follow. Maybe I will release this and some people might find it helpful. Or maybe I can receive feedback and improve this framework.
-I want to design this framework and create a app that can implement this in the end.
+## Problem Statement:
+Failing to plan is planning to fail. However over planning and not doing enough is just as bad.
+I know many people have a hard time planning their days and thus not being as productive as they can.
+I want to create a framework that can be used as a guideline for planning tasks.
+Then implement that framework and create some kind of application that can auto generate your daily tasks.
+If one's too lazy to plan their day, they are not productive and thus stuck in a never ending loop of Procrastination.
+I know this might sound a bit crazy, but hey, change starts with crazy ideas.
 
-Process:
+## Thought Process:
 When I’m presented a problem to solve, I like to start from first principles. Whenever you are stuck, it’s because there’s something more fundamental that you don’t yet understand. I like to build things from the ground up. One of the most important things is to built a good foundation and have good definition for the baseline.
 
-Ideas:
-There is only so many hours in a day to do work. The objective here is to allocate our daily resource (in this case time and energy) to get the most value out of it.
-It’s similar to the Computer Science knapsack problem. We want to look at a list of tasks and pick the highest priority/ value tasks. In this case I think priority applies to things that has to be done, like tasks that have a deadline. Value would be applied to things where we have the freedom to choose and thus leaving us to pick the tasks with the highest return in value. 
+## Ideas:
+There is only so many hours in a day to do stuff. The objective here is to allocate our daily resource (in this case, time and energy) to get the most value out of it. It’s similar to the Computer Science knapsack problem. We want to look at a list of tasks and pick the highest priority/ value tasks. In this case I think priority applies to things that has to be done, like tasks that have a deadline. Value would be applied to things where we have the freedom to choose and thus leaving us to pick the tasks with the highest return in value. 
 
-
+###
 Let’s define the baseline to be one day. I think it makes sense to plan your day out and not your hours out. When you sleep, you kind of “reset” your upcoming day. 
 
 so let’s define the following ideas:
