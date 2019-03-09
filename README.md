@@ -221,21 +221,21 @@ let's say we have 3 projects,
 {
     "short_term_projects":[
     {"stp1-aws certification":{
-        "priority":"high"
+        "priority":"high",
         "time_spent_so_far":"34hr",
         "mile_stones/completed_tasks":["ch1","ch2"],
         "task_queue:":["ch3","ch30"],
         "marker":"some market that tells when the next task is"
     }},
     {"stp2-XXXX":{
-        "priority":"low"
+        "priority":"low",
         "time_spent_so_far":"34hr",
         "mile_stones/completed_tasks":["ch1","ch2"],
         "task_queue:":["ch3","ch30"],
         "marker":"some market that tells when the next task is"
     }},
     {"stp3-yyyyy":{
-        "priority":"high"
+        "priority":"high",
         "time_spent_so_far":"34hr",
         "mile_stones/completed_tasks":["ch1","ch2"],
         "task_queue:":["ch4","ch30"],
@@ -256,6 +256,8 @@ or maybe we can shuffle the tasks that are not set in stone, like laundry, homew
 we can go into th long term and pop some tasks out and create short term tasks.
 
 
+
+# Components:
 
 
 
