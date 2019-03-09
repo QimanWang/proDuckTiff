@@ -12,13 +12,14 @@ When I’m presented a problem to solve, I like to start from first principles. 
 ## Ideas:
 There is only so many hours in a day to do stuff. The objective here is to allocate our daily resource (in this case, time and energy) to get the most value out of it. It’s similar to the Computer Science knapsack problem. We want to look at a list of tasks and pick the highest priority/ value tasks. In this case I think priority applies to things that has to be done, like tasks that have a deadline. Value would be applied to things where we have the freedom to choose and thus leaving us to pick the tasks with the highest return in value. 
 
-###
+
+
+### so let’s define the following ideas:
+
 Let’s define the baseline to be one day. I think it makes sense to plan your day out and not your hours out. When you sleep, you kind of “reset” your upcoming day. 
 
-so let’s define the following ideas:
-
 **T : task - one unit of work.** 
- - T1, T2 … are each tasks
+T1, T2 … are each tasks
 
 **D : day - the smallest planning interval. Composed of T’s**
 {things inside this bracket are part of a list , second part, 3rd part}
@@ -40,6 +41,7 @@ When planning we always want to start from the high level. we need to see the bi
 Let’s see if we can plan something using this framework.
 
 Backlog = {Wash poppy (my dog) , get AWS certification, Workout. }
+
 
 
  
