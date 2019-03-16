@@ -7,27 +7,28 @@ If one's too lazy to plan their day, they are not productive and thus stuck in a
 I know this might sound a bit crazy, but hey, change starts with crazy ideas.
 
 ## Thought Process:
-When I’m presented a problem to solve, I like to start from first principles. Whenever you are stuck, it’s because there’s something more fundamental that you don’t yet understand. I like to build things from the ground up. One of the most important things is to built a good foundation and have good definition for the baseline.
+When I’m presented a problem to solve, I like to start from first principles. Let's built this framework from the ground up. Let's start by defining some entities and definitions. 
 
-## Ideas:
-There is only so many hours in a day to do stuff. The objective here is to allocate our daily resource (in this case, time and energy) to get the most value out of it. It’s similar to the Computer Science knapsack problem. We want to look at a list of tasks and pick the highest priority/ value tasks. In this case I think priority applies to things that has to be done, like tasks that have a deadline. Value would be applied to things where we have the freedom to choose and thus leaving us to pick the tasks with the highest return in value. 
-
-
+## Baseline:
+There is only so many hours in a day to do stuff. The objective here is to allocate our daily resource (in this case, time and energy)to get the most value out of it. It’s similar to the Computer Science knapsack problem. We want to look at a list of tasks and pick the highest priority/ value tasks. In this case I think priority applies to things that has to be done, like tasks that have a deadline. Value would be applied to things where we have the freedom to choose and thus leaving us to pick the tasks with the highest return in value. 
 
 ### so let’s define the following ideas:
 
-Let’s define the baseline to be one day. I think it makes sense to plan your day out and not your hours out. When you sleep, you kind of “reset” your upcoming day. 
+There are two things that are interacting here. Time and Task.
 
-**T : task - one unit of work.** 
-T1, T2 … are each tasks
+Let’s define the baseline to be one day. I think it makes sense to plan your day out and not your hours out. When you sleep, you kind of “reset” your upcoming day. (might come back and change this later on if needed.)
+
+Let's define the smallest unit of work to be one Task. 
+
+**T : task - the smallest unit of work.** 
+T1, T2 … are each tasks. Tasks should only take fraction of an hour to a few hours.
 
 **D : day - the smallest planning interval. Composed of T’s**
-{things inside this bracket are part of a list , second part, 3rd part}
-D1 = {T1,T2,T3,...} this means there can be many tasks in 1 day.
+D1 = {T1,T2,T3,...}  Day1 contains task1,task2,task3,etc.
 
 **S : Short Term Project - Composed of D’s**
-An short term project , goal, milestone that takes couple of days to reach.
-S1 = {D1,D2,...}
+An short term project , goal, milestone that takes couple of tasks to reach.
+S1 = {T1,T2,...}
 
 
 **L : long Term Project - Composed of S’s**
