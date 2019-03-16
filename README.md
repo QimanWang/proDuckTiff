@@ -4,7 +4,6 @@ I know many people have a hard time planning their days and thus not being as pr
 I want to create a framework that can be used as a guideline for planning tasks.
 Then implement that framework and create some kind of application that can auto generate your daily tasks.
 If one's too lazy to plan their day, they are not productive and thus stuck in a never ending loop of Procrastination.
-I know this might sound a bit crazy, but hey, change starts with crazy ideas.
 
 ## Thought Process:
 When I’m presented a problem to solve, I like to start from first principles. Let's built this framework from the ground up. Let's start by defining some entities and definitions. 
@@ -24,8 +23,9 @@ Let's define the smallest unit of work to be one Task.
 T1, T2 … are each tasks. Tasks should only take fraction of an hour to a few hours.
 
 **D : day - the smallest planning interval. Composed of T’s**
+```
 D1 = {T1,T2,T3,...}  Day1 contains task1,task2,task3,etc.
-
+```
 **S : Short Term Project - Composed of D’s**
 An short term project , goal, milestone that takes couple of tasks to reach.
 S1 = {T1,T2,...}
