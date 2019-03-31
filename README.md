@@ -51,9 +51,9 @@ Let’s see if we can plan something using this framework from a high level view
 ### input:
 ```json
 Backlog = {
-    p2:t7 = complete assignment 7 for online course~2hr, 
-    p0:t3 = laundry~1hr
-    p1:t2 = read chapter 2 of twlight~.5hr
+    "p2":"t7 = complete assignment 7 for online course~2hr", 
+    "p0":"t3 = laundry~1hr",
+    "p1":"t2 = read chapter 2 of twlight~.5hr"
     }
 ```
 
